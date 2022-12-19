@@ -1,4 +1,8 @@
 /*style variables*/
+$font: 'Montserrat', sans-serif;
+$font_light: 300;
+$font_reg: 400;
+$font_bold: 600;
 
 $caribbean-green: rgba(0, 204, 153, 1);
 $dark-magenta: rgba(150, 0, 139, 1);
@@ -19,86 +23,185 @@ $silver-metallic: rgba(157, 159, 165, 1);
     overflow: hidden;
     list-style: none;
     text-decoration: none;
+    font-family: $font;
     
 }
 
+body {
+    background-image: url("/Login-Screen/Images/background.png");
+    background-size: cover;
+    background-color: #FFFFFF;
+}
+
 .main_containers {
+    background-image: url("/Login-Screen/Images/background.png");
+    background-size: cover;
+    background-color: #FFFFFF;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100vh;
     width: 100vw;
-   background-color: $platinum;
+    background-color: $platinum;
 
     .welcome_section {
-        width: 50%; 
+        width: 48%; 
         display: flex;
-        flex-flow: column nowrap;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
-    }
-    .form_section {
+        .headings {
+            max-width: 480px;
+            width: 100%;
+            display: flex;
+            flex-flow: column;
 
-        width: 50%;
-        
+            h2  {
+                margin-left: 2em;
+                font-weight: $font_light;
+                font-size: 1.3em;
+            }
+            h1 {
+
+                font-weight: $font_bold;
+                text-align: left;
+                font-size: 2.5625rem;
+            }
+        }
+        .circle_image_container {
+            max-width: 480px;
+            width: 100%;
+            height: 6%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+
+            .circle_image_1 {
+
+                animation: scale 2s ease-in-out alternate infinite;
+            }
+            .circle_image_2 {
+                margin: 5px;
+                animation: scale 2s ease-in-out alternate .4s infinite;
+            }
+            
+            .circle_image_3 {
+                margin: 5px;
+                animation: scale 2s ease-in-out alternate .6s infinite;
+            }
+
+            .circle_image_4 {
+                margin: 5px;
+                animation: scale 2s ease-in-out alternate .8s infinite;
+            }
+
+            .circle_image_5 {
+                margin: 5px;
+                animation:scale 2s ease-in-out alternate 1s infinite;
+            }
+
+            @keyframes scale {
+                0% {
+                    margin-bottom: 0px;
+                }
+                50% {
+                    margin-bottom: 27px;
+                }
+                100% {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+
+    .form_section {
+        width: 48.8%;
         display: flex;
         flex-flow: column nowrap;
-  
-        align-items: center;
         
         .form_section_container {
-            max-width:400px;
-            width: 100%;
-            height: 92%;
-            background-color: $raisin-black;
             display: flex;
             flex-flow: column nowrap;
             justify-content: space-around;
             align-items: center;
+            max-width:600px;
+            width: 100%;
+            height: 90%;
+            background-color: $raisin-black;
             border-bottom-right-radius:25px ;
             border-bottom-left-radius:25px ;
             
-            p, input, a {
-                  color: $platinum;   
-            }
-
             .form_container_input {
-
-                height: 40%;
-                width: 80%;
+                height: 50%;
+                width: 60%;
                 display: flex;
                 flex-flow: column nowrap;
-                justify-content: space-evenly;
+                justify-content: space-around;
+                text-align: left;
+
+                p {
+                    font-weight: $font_bold;
+                    font-size: 1.2rem;
+                    color:$platinum;
+                }
 
                 .input_fields  {
-                    padding: 8px 10px;
+                    display: block;
+                    width: 100%;
+                    margin: 0 auto;
+                    padding: 10px 20px;
                     color: $platinum;
                     outline: none;
                     border-radius: 8px;
                     background-color: $raisin-black;
-                    border: 1px solid  $silver-metallic;
+                    border: 1.8px solid  $silver-metallic;
+                    font-weight: $font_bold;
 
                     &::placeholder {
                         color:$platinum;
                     }
                 }
+            
+                button {
+                    align-self: flex-end;
+                    font-weight: $font_bold;
+                    background-color: $caribbean-green;
+                    color: $platinum;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 10px 15px;
+                }
             }
-
             .form_section_links {
                 display: flex;
                 justify-content: space-around;
-                
-                width: 85%;
+                width: 80%;
+               
+
+                .links {
+                    color: $platinum;
+                    font-weight: $font_light;
+
+                }
             }
 
             .form_circle_container {
                 width: 95%;
                 flex-direction: row;
                 text-align: right;
+                align-content: flex-end;
+                justify-content: end;
                 justify-content: space-around;
             }
         }
-
     }
+}
+
+.footer {
+    position: fixed;
+    bottom:0;
+    right:0;
+    padding:10px;
 }
