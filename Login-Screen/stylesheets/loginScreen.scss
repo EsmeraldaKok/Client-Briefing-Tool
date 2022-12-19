@@ -1,18 +1,18 @@
 /*style variables*/
-$font: 'Montserrat', sans-serif;
-$font_light: 300;
-$font_reg: 400;
-$font_bold: 600;
+    $font: 'Montserrat', sans-serif;
+    $font_light: 300;
+    $font_reg: 400;
+    $font_bold: 600;
 
-$caribbean-green: rgba(0, 204, 153, 1);
-$dark-magenta: rgba(150, 0, 139, 1);
-$sunglow: rgba(253, 202, 1, 1);
-$radical-red: rgba(245, 47, 87, 1);
-$dark-turquoise: rgba(0, 194, 214, 1);
-$black: rgba(0, 0, 0, 1);
-$raisin-black: rgba(38, 41, 54, 1);
-$platinum: rgba(232, 232, 233, 1);
-$silver-metallic: rgba(157, 159, 165, 1);
+    $caribbean-green: rgba(0, 204, 153, 1);
+    $dark-magenta: rgba(150, 0, 139, 1);
+    $sunglow: rgba(253, 202, 1, 1);
+    $radical-red: rgba(245, 47, 87, 1);
+    $dark-turquoise: rgba(0, 194, 214, 1);
+    $black: rgba(0, 0, 0, 1);
+    $raisin-black: rgba(38, 41, 54, 1);
+    $platinum: rgba(232, 232, 233, 1);
+    $silver-metallic: rgba(157, 159, 165, 1);
 
 /*General housekeeping*/
 
@@ -21,41 +21,46 @@ $silver-metallic: rgba(157, 159, 165, 1);
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
-    list-style: none;
     text-decoration: none;
     font-family: $font;
     
 }
 
-body {
-    background-image: url("/Login-Screen/Images/background.png");
-    background-size: cover;
-    background-color: #FFFFFF;
-}
+/*welcome and form section layout*/
 
 .main_containers {
-    background-image: url("/Login-Screen/Images/background.png");
+
+    /*background image and styling*/
+    background-image: url("/Login-Screen/Images/background.png"); 
+    background-color: $platinum; 
+    background-repeat: no-repeat;
     background-size: cover;
     background-color: #FFFFFF;
+    /*layout*/
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 100vh;
     width: 100vw;
-    background-color: $platinum;
+    
+
+    /*left side welcome section*/
 
     .welcome_section {
-        width: 48%; 
+        width: 45%; 
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
 
         .headings {
+   
             max-width: 480px;
             width: 100%;
             display: flex;
             flex-flow: column;
+            justify-content: flex-start;
+            margin-left: 4rem;
 
             h2  {
                 margin-left: 2em;
@@ -69,46 +74,57 @@ body {
                 font-size: 2.5625rem;
             }
         }
+
+        //circles
         .circle_image_container {
             max-width: 480px;
             width: 100%;
-            height: 6%;
+            height: 8%;
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 100;
+            
+            .circle_image {
+                margin: 0px 10px;
+                width:40px;
+                z-index: 100;
+            }
+
+            /*CIRCLE ANIMATIONS*/
 
             .circle_image_1 {
 
-                animation: scale 2s ease-in-out alternate infinite;
+                animation: scale 2s ease-in-out alternate 3;
             }
             .circle_image_2 {
-                margin: 5px;
-                animation: scale 2s ease-in-out alternate .4s infinite;
+
+                animation: scale 2s ease-in-out alternate .2s 3;
             }
             
             .circle_image_3 {
-                margin: 5px;
-                animation: scale 2s ease-in-out alternate .6s infinite;
+
+                animation: scale 2s ease-in-out alternate .4s 3;
             }
 
             .circle_image_4 {
-                margin: 5px;
-                animation: scale 2s ease-in-out alternate .8s infinite;
+
+                animation: scale 2s ease-in-out alternate .6s 3;
             }
 
             .circle_image_5 {
                 margin: 5px;
-                animation:scale 2s ease-in-out alternate 1s infinite;
+                animation:scale 2s ease-in-out alternate .8s 3;
             }
 
             @keyframes scale {
                 0% {
                     margin-bottom: 0px;
                 }
+
                 50% {
-                    margin-bottom: 27px;
+                    margin-bottom: 36px;
                 }
+
                 100% {
                     margin-bottom: 0px;
                 }
@@ -116,16 +132,23 @@ body {
         }
     }
 
+    /*left side form section*/
+
     .form_section {
+        /*general from layout*/
         width: 48.8%;
         display: flex;
         flex-flow: column nowrap;
-        
+
+
+        /*FORM INPUT LAYOUT*/
+
         .form_section_container {
             display: flex;
             flex-flow: column nowrap;
-            justify-content: space-around;
             align-items: center;
+            justify-content: space-evenly;
+            margin-right: 4rem;
             max-width:600px;
             width: 100%;
             height: 90%;
@@ -138,7 +161,7 @@ body {
                 width: 60%;
                 display: flex;
                 flex-flow: column nowrap;
-                justify-content: space-around;
+                justify-content: space-evenly;
                 text-align: left;
 
                 p {
@@ -148,9 +171,7 @@ body {
                 }
 
                 .input_fields  {
-                    display: block;
-                    width: 100%;
-                    margin: 0 auto;
+
                     padding: 10px 20px;
                     color: $platinum;
                     outline: none;
@@ -176,28 +197,33 @@ body {
             }
             .form_section_links {
                 display: flex;
-                justify-content: space-around;
-                width: 80%;
-               
+                justify-content: space-between;
+                width: 60%;
 
                 .links {
                     color: $platinum;
                     font-weight: $font_light;
-
                 }
             }
 
             .form_circle_container {
+
                 width: 95%;
-                flex-direction: row;
-                text-align: right;
-                align-content: flex-end;
+                height: 30%;
+                display: flex;
                 justify-content: end;
-                justify-content: space-around;
+                align-items: flex-end;
+
+                .circle_image {
+                    margin: 0px 10px;
+                    width:40px;
+                }
             }
         }
     }
 }
+
+/*footer image*/
 
 .footer {
     position: fixed;

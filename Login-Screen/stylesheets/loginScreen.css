@@ -5,40 +5,41 @@
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
-  list-style: none;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
 }
 
-body {
-  background-image: url("/Login-Screen/Images/background.png");
-  background-size: cover;
-  background-color: #FFFFFF;
-}
-
+/*welcome and form section layout*/
 .main_containers {
+  /*background image and styling*/
   background-image: url("/Login-Screen/Images/background.png");
+  background-color: rgb(232, 232, 233);
+  background-repeat: no-repeat;
   background-size: cover;
   background-color: #FFFFFF;
+  /*layout*/
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(232, 232, 233);
+  /*left side welcome section*/
+  /*left side form section*/
 }
 .main_containers .welcome_section {
-  width: 48%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .main_containers .welcome_section .headings {
   max-width: 480px;
   width: 100%;
   display: flex;
   flex-flow: column;
+  justify-content: flex-start;
+  margin-left: 4rem;
 }
 .main_containers .welcome_section .headings h2 {
   margin-left: 2em;
@@ -53,42 +54,44 @@ body {
 .main_containers .welcome_section .circle_image_container {
   max-width: 480px;
   width: 100%;
-  height: 6%;
+  height: 8%;
   display: flex;
   justify-content: center;
   align-items: center;
+  /*CIRCLE ANIMATIONS*/
+}
+.main_containers .welcome_section .circle_image_container .circle_image {
+  margin: 0px 10px;
+  width: 40px;
   z-index: 100;
 }
 .main_containers .welcome_section .circle_image_container .circle_image_1 {
-  -webkit-animation: scale 2s ease-in-out alternate infinite;
-          animation: scale 2s ease-in-out alternate infinite;
+  -webkit-animation: scale 2s ease-in-out alternate 3;
+          animation: scale 2s ease-in-out alternate 3;
 }
 .main_containers .welcome_section .circle_image_container .circle_image_2 {
-  margin: 5px;
-  -webkit-animation: scale 2s ease-in-out alternate 0.4s infinite;
-          animation: scale 2s ease-in-out alternate 0.4s infinite;
+  -webkit-animation: scale 2s ease-in-out alternate 0.2s 3;
+          animation: scale 2s ease-in-out alternate 0.2s 3;
 }
 .main_containers .welcome_section .circle_image_container .circle_image_3 {
-  margin: 5px;
-  -webkit-animation: scale 2s ease-in-out alternate 0.6s infinite;
-          animation: scale 2s ease-in-out alternate 0.6s infinite;
+  -webkit-animation: scale 2s ease-in-out alternate 0.4s 3;
+          animation: scale 2s ease-in-out alternate 0.4s 3;
 }
 .main_containers .welcome_section .circle_image_container .circle_image_4 {
-  margin: 5px;
-  -webkit-animation: scale 2s ease-in-out alternate 0.8s infinite;
-          animation: scale 2s ease-in-out alternate 0.8s infinite;
+  -webkit-animation: scale 2s ease-in-out alternate 0.6s 3;
+          animation: scale 2s ease-in-out alternate 0.6s 3;
 }
 .main_containers .welcome_section .circle_image_container .circle_image_5 {
   margin: 5px;
-  -webkit-animation: scale 2s ease-in-out alternate 1s infinite;
-          animation: scale 2s ease-in-out alternate 1s infinite;
+  -webkit-animation: scale 2s ease-in-out alternate 0.8s 3;
+          animation: scale 2s ease-in-out alternate 0.8s 3;
 }
 @-webkit-keyframes scale {
   0% {
     margin-bottom: 0px;
   }
   50% {
-    margin-bottom: 27px;
+    margin-bottom: 36px;
   }
   100% {
     margin-bottom: 0px;
@@ -99,22 +102,25 @@ body {
     margin-bottom: 0px;
   }
   50% {
-    margin-bottom: 27px;
+    margin-bottom: 36px;
   }
   100% {
     margin-bottom: 0px;
   }
 }
 .main_containers .form_section {
+  /*general from layout*/
   width: 48.8%;
   display: flex;
   flex-flow: column nowrap;
+  /*FORM INPUT LAYOUT*/
 }
 .main_containers .form_section .form_section_container {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-evenly;
+  margin-right: 4rem;
   max-width: 600px;
   width: 100%;
   height: 90%;
@@ -127,7 +133,7 @@ body {
   width: 60%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   text-align: left;
 }
 .main_containers .form_section .form_section_container .form_container_input p {
@@ -136,9 +142,6 @@ body {
   color: rgb(232, 232, 233);
 }
 .main_containers .form_section .form_section_container .form_container_input .input_fields {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
   padding: 10px 20px;
   color: rgb(232, 232, 233);
   outline: none;
@@ -167,8 +170,8 @@ body {
 }
 .main_containers .form_section .form_section_container .form_section_links {
   display: flex;
-  justify-content: space-around;
-  width: 80%;
+  justify-content: space-between;
+  width: 60%;
 }
 .main_containers .form_section .form_section_container .form_section_links .links {
   color: rgb(232, 232, 233);
@@ -176,13 +179,17 @@ body {
 }
 .main_containers .form_section .form_section_container .form_circle_container {
   width: 95%;
-  flex-direction: row;
-  text-align: right;
-  align-content: flex-end;
+  height: 30%;
+  display: flex;
   justify-content: end;
-  justify-content: space-around;
+  align-items: flex-end;
+}
+.main_containers .form_section .form_section_container .form_circle_container .circle_image {
+  margin: 0px 10px;
+  width: 40px;
 }
 
+/*footer image*/
 .footer {
   position: fixed;
   bottom: 0;
