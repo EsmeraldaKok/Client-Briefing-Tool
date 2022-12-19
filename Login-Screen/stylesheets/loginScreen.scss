@@ -1,0 +1,104 @@
+/*style variables*/
+
+$caribbean-green: rgba(0, 204, 153, 1);
+$dark-magenta: rgba(150, 0, 139, 1);
+$sunglow: rgba(253, 202, 1, 1);
+$radical-red: rgba(245, 47, 87, 1);
+$dark-turquoise: rgba(0, 194, 214, 1);
+$black: rgba(0, 0, 0, 1);
+$raisin-black: rgba(38, 41, 54, 1);
+$platinum: rgba(232, 232, 233, 1);
+$silver-metallic: rgba(157, 159, 165, 1);
+
+/*General housekeeping*/
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    list-style: none;
+    text-decoration: none;
+    
+}
+
+.main_containers {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+   background-color: $platinum;
+
+    .welcome_section {
+        width: 50%; 
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .form_section {
+
+        width: 50%;
+        
+        display: flex;
+        flex-flow: column nowrap;
+  
+        align-items: center;
+        
+        .form_section_container {
+            max-width:400px;
+            width: 100%;
+            height: 92%;
+            background-color: $raisin-black;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom-right-radius:25px ;
+            border-bottom-left-radius:25px ;
+            
+            p, input, a {
+                  color: $platinum;   
+            }
+
+            .form_container_input {
+
+                height: 40%;
+                width: 80%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-evenly;
+
+                .input_fields  {
+                    padding: 8px 10px;
+                    color: $platinum;
+                    outline: none;
+                    border-radius: 8px;
+                    background-color: $raisin-black;
+                    border: 1px solid  $silver-metallic;
+
+                    &::placeholder {
+                        color:$platinum;
+                    }
+                }
+            }
+
+            .form_section_links {
+                display: flex;
+                justify-content: space-around;
+                
+                width: 85%;
+            }
+
+            .form_circle_container {
+                width: 95%;
+                flex-direction: row;
+                text-align: right;
+                justify-content: space-around;
+            }
+        }
+
+    }
+}

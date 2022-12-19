@@ -1,0 +1,82 @@
+/*style variables*/
+/*General housekeeping*/
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  list-style: none;
+  text-decoration: none;
+}
+
+.main_containers {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(232, 232, 233);
+}
+.main_containers .welcome_section {
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.main_containers .form_section {
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.main_containers .form_section .form_section_container {
+  max-width: 400px;
+  width: 100%;
+  height: 92%;
+  background-color: rgb(38, 41, 54);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.main_containers .form_section .form_section_container p, .main_containers .form_section .form_section_container input, .main_containers .form_section .form_section_container a {
+  color: rgb(232, 232, 233);
+}
+.main_containers .form_section .form_section_container .form_container_input {
+  height: 40%;
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+}
+.main_containers .form_section .form_section_container .form_container_input .input_fields {
+  padding: 8px 10px;
+  color: rgb(232, 232, 233);
+  outline: none;
+  border-radius: 8px;
+  background-color: rgb(38, 41, 54);
+  border: 1px solid rgb(157, 159, 165);
+}
+.main_containers .form_section .form_section_container .form_container_input .input_fields::-moz-placeholder {
+  color: rgb(232, 232, 233);
+}
+.main_containers .form_section .form_section_container .form_container_input .input_fields:-ms-input-placeholder {
+  color: rgb(232, 232, 233);
+}
+.main_containers .form_section .form_section_container .form_container_input .input_fields::placeholder {
+  color: rgb(232, 232, 233);
+}
+.main_containers .form_section .form_section_container .form_section_links {
+  display: flex;
+  justify-content: space-around;
+  width: 85%;
+}
+.main_containers .form_section .form_section_container .form_circle_container {
+  width: 95%;
+  flex-direction: row;
+  text-align: right;
+  justify-content: space-around;
+}/*# sourceMappingURL=loginScreen.css.map */
