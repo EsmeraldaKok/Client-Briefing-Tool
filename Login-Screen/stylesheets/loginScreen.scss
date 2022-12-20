@@ -47,15 +47,14 @@
     /*left side welcome section*/
 
     .welcome_section {
-        width: 45%; 
+        width: 48%; 
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
-
+        
         .headings {
    
-            max-width: 480px;
+            max-width: 600px;
             width: 100%;
             display: flex;
             flex-flow: column;
@@ -63,21 +62,21 @@
             margin-left: 4rem;
 
             h2  {
-                margin-left: 2em;
+                margin-left: 1.5rem;
                 font-weight: $font_light;
-                font-size: 1.3em;
+                font-size: 1.3rem;
             }
             h1 {
 
                 font-weight: $font_bold;
                 text-align: left;
-                font-size: 2.5625rem;
+                font-size: 2.9rem;
             }
         }
 
         //circles
         .circle_image_container {
-            max-width: 480px;
+            max-width: 600px;
             width: 100%;
             height: 8%;
             display: flex;
@@ -139,6 +138,7 @@
         width: 48.8%;
         display: flex;
         flex-flow: column nowrap;
+        
 
 
         /*FORM INPUT LAYOUT*/
@@ -148,10 +148,10 @@
             flex-flow: column nowrap;
             align-items: center;
             justify-content: space-evenly;
-            margin-right: 4rem;
-            max-width:600px;
+            margin-left: 2em;
+            max-width:550px;
             width: 100%;
-            height: 90%;
+            height: 85%;
             background-color: $raisin-black;
             border-bottom-right-radius:25px ;
             border-bottom-left-radius:25px ;

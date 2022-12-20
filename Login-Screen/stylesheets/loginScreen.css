@@ -27,14 +27,13 @@
   /*left side form section*/
 }
 .main_containers .welcome_section {
-  width: 45%;
+  width: 48%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
 }
 .main_containers .welcome_section .headings {
-  max-width: 480px;
+  max-width: 600px;
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -42,17 +41,17 @@
   margin-left: 4rem;
 }
 .main_containers .welcome_section .headings h2 {
-  margin-left: 2em;
+  margin-left: 1.5rem;
   font-weight: 300;
-  font-size: 1.3em;
+  font-size: 1.3rem;
 }
 .main_containers .welcome_section .headings h1 {
   font-weight: 600;
   text-align: left;
-  font-size: 2.5625rem;
+  font-size: 2.9rem;
 }
 .main_containers .welcome_section .circle_image_container {
-  max-width: 480px;
+  max-width: 600px;
   width: 100%;
   height: 8%;
   display: flex;
@@ -120,10 +119,10 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-evenly;
-  margin-right: 4rem;
-  max-width: 600px;
+  margin-left: 2em;
+  max-width: 550px;
   width: 100%;
-  height: 90%;
+  height: 85%;
   background-color: rgb(38, 41, 54);
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
