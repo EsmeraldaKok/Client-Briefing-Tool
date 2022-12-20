@@ -13,7 +13,7 @@
 .main_containers {
   /*background image and styling*/
   background-image: url("/Login-Screen/Images/background.png");
-  background-color: rgb(232, 232, 233);
+  background-color: rgb(248, 248, 255);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #FFFFFF;
@@ -138,11 +138,11 @@
 .main_containers .form_section .form_section_container .form_container_input p {
   font-weight: 600;
   font-size: 1.2rem;
-  color: rgb(232, 232, 233);
+  color: rgb(248, 248, 255);
 }
 .main_containers .form_section .form_section_container .form_container_input .input_fields {
   padding: 10px 20px;
-  color: rgb(232, 232, 233);
+  color: rgb(248, 248, 255);
   outline: none;
   border-radius: 8px;
   background-color: rgb(38, 41, 54);
@@ -150,19 +150,20 @@
   font-weight: 600;
 }
 .main_containers .form_section .form_section_container .form_container_input .input_fields::-moz-placeholder {
-  color: rgb(232, 232, 233);
+  color: rgb(248, 248, 255);
 }
 .main_containers .form_section .form_section_container .form_container_input .input_fields:-ms-input-placeholder {
-  color: rgb(232, 232, 233);
+  color: rgb(248, 248, 255);
 }
 .main_containers .form_section .form_section_container .form_container_input .input_fields::placeholder {
-  color: rgb(232, 232, 233);
+  color: rgb(248, 248, 255);
 }
 .main_containers .form_section .form_section_container .form_container_input button {
+  text-shadow: 0px 0px 6px rgb(0, 0, 0);
   align-self: flex-end;
   font-weight: 600;
-  background-color: rgb(0, 204, 153);
-  color: rgb(232, 232, 233);
+  background-color: rgb(150, 0, 139);
+  color: rgb(248, 248, 255);
   border: none;
   border-radius: 5px;
   padding: 10px 15px;
@@ -173,7 +174,7 @@
   width: 60%;
 }
 .main_containers .form_section .form_section_container .form_section_links .links {
-  color: rgb(232, 232, 233);
+  color: rgb(248, 248, 255);
   font-weight: 300;
 }
 .main_containers .form_section .form_section_container .form_circle_container {
