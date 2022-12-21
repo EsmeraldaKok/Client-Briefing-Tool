@@ -1,0 +1,163 @@
+/*style variables*/
+$font: 'Montserrat', sans-serif;
+$font_light: 300;
+$font_reg: 400;
+$font_bold: 600;
+
+$caribbean-green: rgba(0, 204, 153, 1);
+$dark-magenta: rgba(150, 0, 139, 1);
+$sunglow: rgba(253, 202, 1, 1);
+$radical-red: rgba(245, 47, 87, 1);
+$dark-turquoise: rgba(0, 194, 214, 1);
+$black: rgba(0, 0, 0, 1);
+$raisin-black: rgba(38, 41, 54, 1);
+$platinum: rgb(248, 248, 255);
+$silver-metallic: rgba(157, 159, 165, 0.342);
+
+/*General housekeeping*/
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-decoration: none;
+    list-style: none;
+    font-family: $font;
+}
+body {
+    background-image: "/Dashboard/Images/background.png";
+}
+.navbar {
+    position: fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    max-width: 250px;
+    width: 100%;
+    background-color: $raisin-black;
+
+    .navbar_logo {
+        color: $platinum;
+        font-size: 1.75em;
+        font-weight: $font_bold;
+        text-align: left;
+        padding:.9em 1.1em;
+    }
+
+    .navbar_dash_btn {
+        display: block;
+        background-color: $dark-turquoise;
+        color: $platinum;
+        padding: 6px 10px;
+        margin: .5em 2em;
+        border: none;
+        border-radius: 25px;
+        width: 50%;
+        text-align: center;
+        
+        &:hover {
+            background-color: black;
+        }
+    }
+
+    .navbar_menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-left: 1em;
+        margin-top: 2em;
+
+        &_items {
+            color: $platinum;
+            background-color: $caribbean-green;
+            border-radius: 25px;
+            padding: .4em .8em;
+            margin: .3em;
+            cursor: pointer;
+
+            &:hover {
+                background-color: black;
+            }
+            
+        }
+
+    }
+
+    .navbar_bottom {
+        position: fixed;
+        bottom: 0;
+    }
+
+    .navbar_user_bubble {
+        width: 260px;
+        max-width: 100%;
+        display: flex;
+        
+        align-items: center;
+        background-color: $silver-metallic;
+        padding: .4rem .8rem;
+        border-radius:80px;
+        margin-left: .8rem;
+
+        &_list_items {
+            color: $platinum;
+            padding-bottom: .2em;
+            padding-left: .6rem;
+             
+
+             &:nth-child(1) {
+                font-size: 19px;
+                font-weight: $font_bold;
+             }
+             &:nth-child(2) {
+                font-size: 16px;
+                font-weight: $font_reg;
+             }
+             &:nth-child(3) {
+                font-size: 14px;
+                font-weight: $font_light;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+             }
+        }
+    }
+    .navbar_btn {
+        padding: .5rem 1rem;
+        border-radius: 25px;
+        background-color: $radical-red;
+        color: $platinum;
+        border: none;
+        margin: 1rem ;
+
+        &:hover {
+            background-color: black;
+        }
+    }
+}
+
+.info_panel {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    max-width: 100%;
+    margin-right: 0;
+}
+    .info_panel_tabs {
+        transform: rotate(-90deg);
+        background-color: $silver-metallic;
+        color: $platinum;
+        padding: 22px 16px;
+        border: none;
+        border-radius: 15px;
+        outline: none;
+        cursor: pointer;    
+    }
