@@ -13,6 +13,8 @@
 
     <body>
 
+        <!--left navbar-->
+
         <nav class="navbar">
 
             <h1 class="navbar_logo">Client briefing tool</h1>
@@ -51,15 +53,63 @@
             </div>
         </nav>
 
-        <div class="info_panel">
-            <button class="info_panel_tabs">Notes</button>
-            <button class="info_panel_tabs">Calander</button>
-            <button class="info_panel_tabs">Contacts</button>
-        </div>
+        <!--quick stats-->
 
-        <div role="footer" class="footer">
-            <img src="/Dashboard/Images/logo.svg" />
+        <section class="quick_overview">
+            <h2>Quick stats</h2>
+            
+            <div class="quick_overview_items">
+                <img src="/Dashboard/Images/userIconBlue.svg" class="quick_overview_items_icon"/>
+                <p class="quick_overview_items_count">8</p>
+                <p class="quick_overview_items_description">Users</p>
+            </div>
+            <div class="quick_overview_items">
+                <img src="/Dashboard/Images/clientsIcon.svg" class="quick_overview_items_icon" />
+                <p class="quick_overview_items_count">8</p>
+                <p class="quick_overview_items_description">Clients</p>
+            </div>
+            <div class="quick_overview_items">
+                <img src="/Dashboard/Images/bagIcon.svg" class="quick_overview_items_icon"/>
+                <p class="quick_overview_items_count">2</p>
+                <p class="quick_overview_items_description">Client Industries</p>
+            </div>
+            <div class="quick_overview_items">
+                <img src="/Dashboard/Images/projectsIcon.svg" class="quick_overview_items_icon"/>
+                <p class="quick_overview_items_count">12</p>
+                <p class="quick_overview_items_description">Projects</p>
+            </div>
+
+
+        </section>
+
+        <!--right sided tabs-->
+
+        <div class="tabs"> 
+
+            <div class="tab-content" id="tab-1-content">
+              Tab 1 content goes here
+            </div>
+            <div class="tab-content" id="tab-2-content">
+              <div id="calendar"></div>
+
+            </div>
+            <div class="tab-content" id="tab-3-content">
+              Tab 3 content goes here
+            </div>
+
+            <button class="tab-button" id="tab-1">Notes</button>
+            <button class="tab-button" id="tab-2">Calendar</button>
+            <button class="tab-button" id="tab-3">Contacts</button> 
         </div>
+          
+
+        <!--footer-->
+
+        <section role="footer" class="footer">
+            <img src="/Dashboard/Images/logo.svg" />
+        </section>
+
+        <script src="./dashboard.js"></script>
     </body>
 
 
