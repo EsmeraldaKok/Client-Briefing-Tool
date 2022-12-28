@@ -84,22 +84,25 @@
 
         <!--right sided tabs-->
 
-        <div class="tabs"> 
-
-            <div class="tab-content" id="tab-1-content">
+        <div class="tab"> 
+        <div class="tab_content_container">
+            <div class="tab_content" id="tab_1_content">
               Tab 1 content goes here
             </div>
-            <div class="tab-content" id="tab-2-content">
-              <div id="calendar"></div>
-
+            <div class="tab_content" id="tab_2_content">
+                <div id="calendar-container"></div>
+                <button id="previous-month-button">Previous Month</button>
+                <button id="next-month-button">Next Month</button>
             </div>
-            <div class="tab-content" id="tab-3-content">
+            <div class="tab_content" id="tab_3_content">
               Tab 3 content goes here
             </div>
-
-            <button class="tab-button" id="tab-1">Notes</button>
-            <button class="tab-button" id="tab-2">Calendar</button>
-            <button class="tab-button" id="tab-3">Contacts</button> 
+        </div> 
+        <div class="tab_button_container">
+            <button class="tab_button" id="tab_1">Notes</button>
+            <button class="tab_button" id="tab_2">Calendar</button>
+            <button class="tab_button" id="tab_3">Contacts</button> 
+        </div>  
         </div>
           
 
@@ -109,7 +112,7 @@
             <img src="/Dashboard/Images/logo.svg" />
         </section>
 
-        <script src="./dashboard.js"></script>
+        <script src="./dashboard.js></script>
     </body>
 
 
