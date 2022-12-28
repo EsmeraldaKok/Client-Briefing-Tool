@@ -227,8 +227,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: rgb(248, 248, 255);
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-radius: 25px;
 }
 .tab_content_container .tab_content .calendar_heading_container .calendar_heading {
   color: rgb(38, 41, 54);
