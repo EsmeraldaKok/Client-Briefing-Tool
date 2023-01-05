@@ -1,4 +1,4 @@
-//tabs  functionality
+//tabs 
 const tabButtons = document.querySelectorAll('.tab_button');
 
 tabButtons.forEach(button => {
@@ -6,69 +6,95 @@ tabButtons.forEach(button => {
     const tabContent = document.querySelector(`#${event.target.id}_content`);
     const otherTabs = document.querySelectorAll(`.tab_content:not(#${event.target.id}_content)`);
 
-    tabContent.style.display = 'block';
+    tabContent.style.display = 'flex';
     otherTabs.forEach(tab => tab.style.display = 'none');
   });
 });
 
 
+//calendar
+
+let initialDate = new Date();
+let currentDate = new Date();
+let currentYear = currentDate.getFullYear();
+let currentMonth = currentDate.getMonth();
 
 
-let currentMonth;
-let currentYear;
+let currentMonthInt = new Intl.DateTimeFormat('en-US', { month: 'long'}).format(currentDate);
 
-function generateCalendar(month, year) {
-  currentMonth = month;
-  currentYear = year;
 
-  //an array of the days in the month
-  const days = [];
-  for (let i = 1; i <= new Date(year, month + 1, 0).getDate(); i++) {
-    days.push(i);
-  }
+let calendarYearMonth = document.body.querySelector(".calendar_month_year");
+let calendarDays = document.body.querySelector(".calendar_days");
 
-  //the calendar 
-  const calendarHTML = `
-    <div class="calendar">
-      <div class="calendar-header">${getMonthName(month)} ${year}</div>
-      <div class="calendar-days">
-        ${days.map(day => `<div class="calendar-day">${day}</div>`).join('')}
-      </div>
-    </div>
-  `;
-  document.querySelector('#calendar-container').innerHTML = calendarHTML;
+
+calendarYearMonth.innerHTML = `<strong>${currentMonthInt}</strong> ${currentYear}`
+
+
+document.body.onload = fillCalendarCurrentMonth(currentYear, currentMonth);
+ 
+function fillCalendarCurrentMonth (year, month) {
+    let firstDayOfMonth = new Date(year, month, 1);
+    let firstDayOfMonthWeekday = firstDayOfMonth.getDay(); //define the week day of the first day given month (0-6)
+    let lastDayOfMonth = new Date(year, month + 1, 0); //define last day of given month (this will be a day number 0 of next month)
+
+
+for (let i = 1; i <= lastDayOfMonth.getDate(); i++) {
+        let dateElement = document.createElement("p");
+        let dateContent = document.createTextNode(i);
+        dateElement.appendChild(dateContent);
+        calendarDays.appendChild(dateElement);
+};
+
+ 
+let calendarFirstDay = document.body.querySelector(".calendar_days p:first-child")
+        if (firstDayOfMonthWeekday == 0) {
+            calendarFirstDay.style.gridColumn = "7";
+        } 
+        else {
+            calendarFirstDay.style.gridColumn = firstDayOfMonthWeekday;
+                    
+        };
 }
 
-function getMonthName(month) {
-  // returns the name of the month (e.g. "January") based on the month number (e.g. 0 for January)
-  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  return monthNames[month];
-}
 
-function previousMonth() {
-  if (currentMonth === 0) {
-    currentMonth = 11;
-    currentYear--;
-  } else {
-    currentMonth--;
-  }
-  generateCalendar(currentMonth, currentYear);
-}
+const nextMonthButton = document.getElementById('calendar-next-month');
+const previousMonthButton = document.getElementById("calendar-previous-month");
 
-function nextMonth() {
-  if (currentMonth === 11) {
-    currentMonth = 0;
-    currentYear++;
-  } else {
-    currentMonth++;
-  }
-  generateCalendar(currentMonth, currentYear);
-}
+nextMonthButton.addEventListener('click', function (event) {
 
-// generate the current month's calendar
-generateCalendar(new Date().getMonth(), new Date().getFullYear());
+    previousMonthButton.removeAttribute("disabled"); 
 
-// add event listeners to the navigation buttons
-document.querySelector('#previous-month-button').addEventListener('click', previousMonth);
-document.querySelector('#next-month-button').addEventListener('click', nextMonth);
+    if (currentMonth === 11) {
+        currentMonth = 0;
+        currentYear++;
+    } else {
+        currentMonth++
+    };
 
+    
+    let alteredMonth = currentDate.setMonth(currentMonth);
+    calendarDays.innerHTML = "";
+    fillCalendarCurrentMonth(currentYear, currentMonth);
+    
+    let currentMonthInt = new Intl.DateTimeFormat('en-US', { month: 'long'}).format(alteredMonth);
+    calendarYearMonth.innerHTML = `<strong>${currentMonthInt}</strong> ${currentYear}`
+});
+
+previousMonthButton.addEventListener('click', function (event) {
+    if (currentMonth === 0) {
+        currentMonth = 11;
+        currentYear--;
+    } else {
+        currentMonth--
+    };
+
+    let alteredMonth = currentDate.setMonth(currentMonth);
+    calendarDays.innerHTML = "";
+    fillCalendarCurrentMonth(currentYear, currentMonth);
+    let currentMonthInt = new Intl.DateTimeFormat('en-US', { month: 'long'}).format(alteredMonth);
+    calendarYearMonth.innerHTML = `<strong>${currentMonthInt}</strong> ${currentYear}`
+    
+    if (initialDate.getMonth() == currentMonth && initialDate.getFullYear() == currentYear) {
+    previousMonthButton.setAttribute("disabled", ""); 
+    };
+ })

@@ -26,9 +26,10 @@ $silver-metallic: rgba(157, 159, 165, 0.342);
     font-family: $font;
 }
 
-body {
-    background-image: "/Dashboard/Images/background.png";
-}
+/*body {
+      display: flex;
+}*/
+
 /*left sided nav*/
 .navbar {
     position: absolute;
@@ -182,20 +183,24 @@ body {
 /*vertical tabs*/
 
 .tab {
-    float: right;
+    position: fixed;
+    right: 0;
+    top:0;
+    bottom: 0;
     border: none;
     background-color: white;
     width: 100%;
-    max-width: 800px;
-    height: 400px;
+    max-width:800px;
+    height: 500px;
     max-height: 100%;
     display: flex;
     flex-flow: row ;
     justify-content: space-between;
+    margin-top: 2rem;
 
   
     &_button_container {
-       background-color: inherit;
+        background-color: inherit;
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-evenly;
@@ -224,85 +229,163 @@ body {
     }
 
     &_content_container {
-
-        display: block;
-        width: 800px;
-        max-width: 85%;
+        width: 600px;
+        max-width: 95%;
+        height: 450px;
 
         .tab_content {
-            
-            width: 85%;
-            height: 350px;
-            margin:1.6rem 2.9rem;
-
-            .calendar {
-                    display: flex;
-                    flex-direction: column;
-                    width: 70%;
-                    margin: 1rem 4rem;
-                    padding: 1rem 1.5rem;
-                    background-color: $platinum;
-                    border: none;
-                    border-radius: 8%;
-                  
-                    .calendar-header {
-                        align-items: flex-start;
-                        font-size: 1.05rem;
-                        font-weight: bold;
-
-                    }
-                  
-                    .calendar-days {
-                        display: flex;
-                        flex-wrap: wrap;
-                        flex: 0 0 14.28%;
-                        
-                      .calendar-day {
-                        text-align: center;
-                        padding: 1rem .8rem;
-
-                        &:hover, &:active {
-                            color: white;
-                            background-color: $radical-red;
-                            border-radius: 100%;
-                        }
-                      }
-                    }
-            }
-            
-            .calendar_heading_container {
-                width: 70%;
-                margin: 0rem 4rem;
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-between;
-                align-items: center;
-                background-color: $platinum;
-                border-radius: 25px;
-                
-
-                .calendar_heading {
-                    color:$raisin-black;
-                    font-weight: $font_bold;
-                }
-
-                .calendar_heading_button {
-                    background-color: $platinum;
-                    border: none;
-                    cursor: pointer;
-
-                    img {
-                        background-color: $platinum;
-                    }
-                }
-            }
-                
-                  
-                  
+            display: block;
+            width: 100%;
         }
 
-    }
-}
+        #tab_2_content {
+            margin:1.6rem 3.8rem;
+            background-color: $platinum;
+            width: 80%;
+            height: 90%;
+            border-radius: 25px;
+        
+            .calendar_container {
+                margin: 2rem 2.5rem;
+                max-width: 85%;
+                max-height: 85%;
+                border-radius: 25px;
+                display: flex;
+                flex-flow: column nowrap;
+                background-color: white;
+                
+                .calendar_btn_previous, 
+                .calendar_btn_next {
+                    background-color: white;
+                    width: auto;
+                    cursor: pointer;
+                    border: none;                    
+                    outline: none;
+                    display: flex;
+                    
+                }
+                
+                    .calendar_month_year_container {
+                        display: grid;
+                        grid-template-areas: "back title next";
+                        grid-template-columns: 12% 1fr 12%;
+                        margin-bottom: 1em;
+                    }
+                
+                .calendar_month_year {
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        grid-area: title;
+                    }
+                
+                    .calendar_week_days {
+                        text-align: center;
+                        display: grid;
+                        grid-template-rows: auto;
+                        grid-template-columns: repeat(7, 1fr);
+                        padding: .5em;
+                        font-weight: $font_reg;
+                    }
+                
+                    .calendar_days {
+                        text-align: center;
+                        display: grid;
+                        grid-template-rows: repeat(6, 1fr);
+                        grid-template-columns: repeat(7, 1fr);
+                        font-weight: $font_light;
+                        color: $raisin-black;
+
+                        
+                    }
+                
+                    .calendar_days p {
+                        margin: 0;
+                        padding: .7rem 1.2rem;
+                        text-align: center;
+                        
+                        &:hover {
+                            border-radius: 50%;
+                            color: $radical-red;
+                            font-weight: $font_bold;
+                            background-color: rgba(236, 124, 147, 0.514);
+                        }
+
+                    }
+                
+                    .calendar_days p:nth-child(n + 1) {
+                        margin-left: -1px;
+                    }
+                
+                    .calendar_days p {
+                        margin-bottom: -1px;
+                    }
+                
+                    #calendar-previous-month {
+                        grid-area: back;
+                    }
+                
+                    #calendar-next-month {
+                        grid-area: next;
+                    }
+            }   
+        }}
+    
+        #tab_1_content {
+
+            max-width: 600px;
+            width: 90%;
+            height: 450px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            border-radius: 5%;
+
+            .tab_1_aside_conatiner {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                height: 100%;
+            }
+
+            .tab_1_rightside_container {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                background-color: aqua;
+
+
+                .tab_1_heading_container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    width: 100%;
+                    height: 10%;
+                }
+
+                .tab_1_note_container {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    height: 85%;
+
+                    textarea{
+                        align-self: center;
+                        width: 85%;
+                        height:100%;
+                        outline: none;
+                        border: none;
+                        border-radius: 5%;
+                    }
+                    
+                }
+
+            }
+        }
+    
+}   
+
     
     
     

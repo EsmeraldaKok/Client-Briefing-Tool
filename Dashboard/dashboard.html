@@ -85,27 +85,103 @@
         <!--right sided tabs-->
 
         <div class="tab"> 
-        <div class="tab_content_container">
-            <div class="tab_content" id="tab_1_content">
-              Tab 1 content goes here
-            </div>
-            <div class="tab_content" id="tab_2_content">
-                <div class="calendar_heading_container">
-                    <button id="previous-month-button" class="calendar_heading_button"><img src="./Images/lefticon.svg"></button>
-                    <h3 class="calendar_heading">Calendar</h3>
-                    <button id="next-month-button" class="calendar_heading_button"><img src="./Images/righticon.svg"></button>
+
+            <div class="tab_content_container">
+
+                <!--tab one content-->
+
+                <div class="tab_content" id="tab_1_content">
+
+                    <!--left side tabs and buttons-->
+
+                    <div class="tab_1_aside_conatiner">
+                        <button><img src="Images\upArrowIcon.svg"></button>
+                        <button><img src="Images\addIcon.svg"></button>
+                        <span>my first note</span>
+                        <button><img src="Images/downIcon.svg"></button>
+                    </div>
+
+                    <!--right side textarea and headings-->
+
+                    <div class="tab_1_rightside_container">
+                        <div class="tab_1_heading_container">
+                            <div class="tab_1_heading_container_text">
+                                <p>User Notes</p>
+                                <input type="text" alt="note name">
+                            </div>
+                            <div class="tab_1_note_heading_btns">
+                                <img src="Images/NoteIcon.svg" class="note_btns">
+                                <img src="Images/forwardIcon.svg" class="note_btns">
+                                <img src="Images/printerIcon.svg" class="note_btns">
+                                <img src="Images/sendIcon.svg" class="note_btns">
+                                <img src="Images/deleteIcon.svg" class="note_btns">
+                            </div>
+                        </div>
+                        <div class="tab_1_note_container">
+                            <textarea></textarea>
+                            <div class="note_btn_container">
+                                <button class="note_btn">Tag a client</button>
+                                <button class="note_btn">No project tagged</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                    <div id="calendar-container"></div>
-            </div>
-            <div class="tab_content" id="tab_3_content">
-              Tab 3 content goes here
-            </div>
-        </div> 
-        <div class="tab_button_container">
-            <button class="tab_button" id="tab_1">Notes</button>
-            <button class="tab_button" id="tab_2">Calendar</button>
-            <button class="tab_button" id="tab_3">Contacts</button> 
-        </div>  
+
+                <!-----tab 2 content----->
+
+                <div class="tab_content" id="tab_2_content">
+
+                    <div class="calendar_container">
+
+                        <div class="calendar_month_year_container">
+
+                            <!--previous month btn-->
+
+                            <button type="button" id="calendar-previous-month" disabled="true" class="calendar_btn_previous">
+                                <img src="./Images/lefticon.svg" alt="left button for previous month" />
+                            </button>
+
+                            <div class="calendar_month_year"></div>
+
+                            <!--next month btn-->
+
+                            <button type="button" id="calendar-next-month" class="calendar_btn_next">
+                                <img src="./Images/righticon.svg" alt="right button for next month" />
+                            </button>
+                        </div>
+
+                        <!--weekdays-->
+
+                        <div class="calendar_week_days">
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                            <div>Sun</div>
+                        </div>
+
+                        <!--numeric days-->
+
+                        <div class="calendar_days"></div>
+
+                    </div> 
+                </div>
+
+                <!-----tab 3 content----->
+
+                <div class="tab_content" id="tab_3_content">
+                </div>
+
+            </div> 
+
+            <div class="tab_button_container">
+                <button class="tab_button" id="tab_1">Notes</button>
+                <button class="tab_button" id="tab_2">Calendar</button>
+                <button class="tab_button" id="tab_3">Contacts</button> 
+            </div>  
+
         </div>
           
 
