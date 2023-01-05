@@ -330,7 +330,9 @@ $silver-metallic: rgba(157, 159, 165, 0.342);
                     }
             }   
         }}
-    
+
+        /*tab 1 content*/
+
         #tab_1_content {
 
             max-width: 600px;
@@ -339,23 +341,65 @@ $silver-metallic: rgba(157, 159, 165, 0.342);
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-            border-radius: 5%;
+           
+
+            /*aside btn notes*/
 
             .tab_1_aside_conatiner {
+                
                 display: flex;
                 flex-flow: column nowrap;
                 justify-content: space-between;
                 height: 100%;
+
+
+
+                /*aside button styles*/
+
+                .aside_btns  {
+                    cursor: pointer;
+                    align-self: flex-end;
+                    width: 40px;
+                    border: none;
+                    padding: .3rem .2rem;
+                    border-top-left-radius: 48%;
+                    border-bottom-left-radius: 48%;
+                    background-color: $dark-turquoise;
+                    box-shadow: 8px 1px 2px rgba(112, 97, 97, 0.479);
+
+
+                    &:nth-child(2) {
+                        background-color:$caribbean-green;
+                    }
+                    &:nth-child(3) {
+                        justify-self:flex-end
+                    }
+
+                }
+
+                /*note tabs styles*/
+                span {
+                    background-color: $silver-metallic;
+                    text-align: right;
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                    font-size: .75rem;
+                    font-weight: $font_bold;
+                    padding: .5rem .3rem;
+                    box-shadow: 8px 1px 2px rgba(112, 97, 97, 0.479);
+
+                }
             }
 
             .tab_1_rightside_container {
-                width: 100%;
+                width: 80%;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
                 background-color: $silver-metallic;
-
+                border-bottom-right-radius: 5%;
+                border-top-right-radius: 5%;
 
                 .tab_1_heading_container {
                     display: flex;
@@ -381,6 +425,7 @@ $silver-metallic: rgba(157, 159, 165, 0.342);
                             color: $raisin-black;
                         }
                     }
+
                     .tab_1_note_heading_btns {
                         display: flex;
                         flex-flow: row nowrap;
@@ -440,12 +485,6 @@ $silver-metallic: rgba(157, 159, 165, 0.342);
         }
     
 }   
-
-    
-    
-    
-    
-
 
 /*footer*/
 .footer {

@@ -157,6 +157,7 @@
   flex-flow: row;
   justify-content: space-between;
   margin-top: 2rem;
+  /*tab 1 content*/
 }
 .tab_button_container {
   background-color: inherit;
@@ -275,21 +276,52 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  border-radius: 5%;
+  /*aside btn notes*/
 }
 .tab #tab_1_content .tab_1_aside_conatiner {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   height: 100%;
+  /*aside button styles*/
+  /*note tabs styles*/
+}
+.tab #tab_1_content .tab_1_aside_conatiner .aside_btns {
+  cursor: pointer;
+  align-self: flex-end;
+  width: 40px;
+  border: none;
+  padding: 0.3rem 0.2rem;
+  border-top-left-radius: 48%;
+  border-bottom-left-radius: 48%;
+  background-color: rgb(0, 194, 214);
+  box-shadow: 8px 1px 2px rgba(112, 97, 97, 0.479);
+}
+.tab #tab_1_content .tab_1_aside_conatiner .aside_btns:nth-child(2) {
+  background-color: rgb(0, 204, 153);
+}
+.tab #tab_1_content .tab_1_aside_conatiner .aside_btns:nth-child(3) {
+  justify-self: flex-end;
+}
+.tab #tab_1_content .tab_1_aside_conatiner span {
+  background-color: rgba(157, 159, 165, 0.342);
+  text-align: right;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.5rem 0.3rem;
+  box-shadow: 8px 1px 2px rgba(112, 97, 97, 0.479);
 }
 .tab #tab_1_content .tab_1_rightside_container {
-  width: 100%;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   background-color: rgba(157, 159, 165, 0.342);
+  border-bottom-right-radius: 5%;
+  border-top-right-radius: 5%;
 }
 .tab #tab_1_content .tab_1_rightside_container .tab_1_heading_container {
   display: flex;
