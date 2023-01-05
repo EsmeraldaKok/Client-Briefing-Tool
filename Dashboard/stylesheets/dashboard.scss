@@ -354,7 +354,7 @@ $silver-metallic: rgba(157, 159, 165, 0.342);
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
-                background-color: aqua;
+                background-color: $silver-metallic;
 
 
                 .tab_1_heading_container {
@@ -363,6 +363,38 @@ $silver-metallic: rgba(157, 159, 165, 0.342);
                     justify-content: space-evenly;
                     width: 100%;
                     height: 10%;
+
+                    .tab_1_heading_container_text {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+
+
+                        p {
+                            color: $raisin-black;
+                            font-weight: $font_light;
+                            font-size: .8rem;
+                        }
+
+                        h3 {
+                            font-size: 1.15rem;
+                            color: $raisin-black;
+                        }
+                    }
+                    .tab_1_note_heading_btns {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: space-evenly;
+                        align-items: flex-end;
+
+                        .note_btns {
+                            cursor: pointer;
+                            padding:.5rem;
+                            width: 35px;
+                            align-self: center;
+                            justify-self: center;
+                        }
+                    }
                 }
 
                 .tab_1_note_container {
@@ -378,7 +410,30 @@ $silver-metallic: rgba(157, 159, 165, 0.342);
                         border: none;
                         border-radius: 5%;
                     }
-                    
+
+                    .note_btn_container {
+                        align-self: flex-end;
+                        padding: .8rem;
+
+                        .note_btn {
+                            font-size: .6rem;
+                            padding: .25rem .55rem;
+                            border: none; 
+                            border-radius: 25px;
+                            background-color: $platinum;
+                            color:$radical-red;
+                            font-weight: $font_bold;
+                            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+                            &:hover {
+                                color: $raisin-black;
+                            }
+                           
+                        }
+
+                    }
+
+
                 }
 
             }

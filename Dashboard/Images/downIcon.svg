@@ -4,7 +4,9 @@
       <rect id="Rectangle_187" data-name="Rectangle 187" width="28" height="28" fill="#fff"/>
     </clipPath>
   </defs>
-  <g id="Group_1085" data-name="Group 1085" clip-path="url(#clip-path)">
-    <path id="Path_1982" data-name="Path 1982" d="M0,14A14,14,0,1,0,14,0,14,14,0,0,0,0,14M15.01,8.96l6.24,6.24a1.35,1.35,0,0,1,.39.94,1.315,1.315,0,0,1-2.25.93L14,11.68,8.61,17.07a1.315,1.315,0,0,1-2.25-.93,1.292,1.292,0,0,1,.39-.94l6.24-6.24a1.424,1.424,0,0,1,2.02,0" fill="#fff"/>
+  <g id="Group_1086" data-name="Group 1086" transform="translate(28 28) rotate(180)">
+    <g id="Group_1085" data-name="Group 1085" clip-path="url(#clip-path)">
+      <path id="Path_1982" data-name="Path 1982" d="M0,14A14,14,0,1,0,14,0,14,14,0,0,0,0,14M15.01,8.96l6.24,6.24a1.35,1.35,0,0,1,.39.94,1.315,1.315,0,0,1-2.25.93L14,11.68,8.61,17.07a1.315,1.315,0,0,1-2.25-.93,1.292,1.292,0,0,1,.39-.94l6.24-6.24a1.424,1.424,0,0,1,2.02,0" fill="#fff"/>
+    </g>
   </g>
 </svg>
