@@ -10,9 +10,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-/*body {
-      display: flex;
-}*/
 /*left sided nav*/
 .navbar {
   position: absolute;
@@ -63,11 +60,13 @@
 .navbar .navbar_menu_items:hover {
   background-color: black;
 }
-.navbar .navbar_bottom {
+
+.navbar_bottom {
   position: fixed;
   bottom: 0;
 }
-.navbar .navbar_user_bubble {
+
+.navbar_user_bubble {
   width: 260px;
   max-width: 100%;
   display: flex;
@@ -77,27 +76,28 @@
   border-radius: 80px;
   margin-left: 0.8rem;
 }
-.navbar .navbar_user_bubble_list_items {
+.navbar_user_bubble_list_items {
   color: rgb(248, 248, 255);
   padding-bottom: 0.2em;
   padding-left: 0.6rem;
 }
-.navbar .navbar_user_bubble_list_items:nth-child(1) {
+.navbar_user_bubble_list_items:nth-child(1) {
   font-size: 19px;
   font-weight: 600;
 }
-.navbar .navbar_user_bubble_list_items:nth-child(2) {
+.navbar_user_bubble_list_items:nth-child(2) {
   font-size: 16px;
   font-weight: 400;
 }
-.navbar .navbar_user_bubble_list_items:nth-child(3) {
+.navbar_user_bubble_list_items:nth-child(3) {
   font-size: 14px;
   font-weight: 300;
 }
-.navbar .navbar_user_bubble_list_items:nth-child(3):hover {
+.navbar_user_bubble_list_items:nth-child(3):hover {
   text-decoration: underline;
 }
-.navbar .navbar_btn {
+
+.navbar_btn {
   padding: 0.5rem 1rem;
   border-radius: 25px;
   background-color: rgb(245, 47, 87);
@@ -105,7 +105,7 @@
   border: none;
   margin: 1rem;
 }
-.navbar .navbar_btn:hover {
+.navbar_btn:hover {
   background-color: black;
 }
 

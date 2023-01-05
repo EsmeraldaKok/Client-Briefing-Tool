@@ -26,9 +26,6 @@ $silver-metallic: rgba(157, 159, 165, 0.342);
     font-family: $font;
 }
 
-/*body {
-      display: flex;
-}*/
 
 /*left sided nav*/
 .navbar {
@@ -83,11 +80,12 @@ $silver-metallic: rgba(157, 159, 165, 0.342);
             &:hover {
                 background-color: black;
             }
-            
-        }
 
+            }
+        }
     }
 
+    
     .navbar_bottom {
         position: fixed;
         bottom: 0;
@@ -140,7 +138,7 @@ $silver-metallic: rgba(157, 159, 165, 0.342);
             background-color: black;
         }
     }
-}
+
 
 /*quick stats overview*/
 .quick_overview {
