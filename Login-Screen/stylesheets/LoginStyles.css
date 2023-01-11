@@ -1,0 +1,247 @@
+/*style variables*/
+/*General housekeeping*/
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*background Image*/
+body {
+  background-image: url("../Images/background.png");
+  background-color: rgb(248, 248, 255);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*main container for login screen elements*/
+.main_containers {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  /*welcome section*/
+  /*form section*/
+}
+.main_containers .welcome_section {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 95%;
+  /*headings container*/
+  /*dot imaage container*/
+}
+.main_containers .welcome_section .headings {
+  max-width: 390px;
+  width: 100%;
+  flex-flow: column nowrap;
+}
+.main_containers .welcome_section .headings p {
+  color: rgb(38, 41, 54);
+  font-size: 1.125rem;
+  font-weight: 300;
+  padding: 2rem 0 0.5rem 1.875rem;
+}
+.main_containers .welcome_section .headings h1 {
+  color: rgb(38, 41, 54);
+  font-size: 2.375rem;
+  align-self: flex-start;
+  justify-self: center;
+}
+.main_containers .welcome_section .circle_image_container {
+  max-width: 250px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 1.8rem;
+}
+.main_containers .welcome_section .circle_image_container .circle_image {
+  width: 60px;
+  padding: 0.8rem 0.5rem;
+}
+.main_containers .form_section {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 400px;
+  width: 95%;
+  background-color: rgb(38, 41, 54);
+  border-radius: 15px;
+  padding: 1rem 1.2rem;
+}
+.main_containers .form_section_input {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+.main_containers .form_section_input h2 {
+  margin: 1.6rem 0rem 1rem 12.5%;
+  font-size: 1.25rem;
+  color: rgb(248, 248, 255);
+}
+.main_containers .form_section_input .input_fields {
+  align-self: center;
+  width: 75%;
+  padding: 0.6rem 0.4rem;
+  margin-bottom: 0.8rem;
+  border-radius: 12px;
+  border: 2px solid rgb(248, 248, 255);
+  outline: none;
+  background-color: rgb(38, 41, 54);
+  color: rgb(157, 159, 165);
+}
+.main_containers .form_section_input .login_btn {
+  align-self: flex-end;
+  padding: 0.8rem 1.5rem;
+  margin-right: 12.5%;
+  margin-bottom: 2rem;
+  font-size: 1.041rem;
+  font-weight: 400;
+  color: rgb(248, 248, 255);
+  background-color: rgb(150, 0, 139);
+  border: none;
+  border-radius: 10px;
+}
+.main_containers .form_section_input .login_btn:hover {
+  background-color: #222;
+}
+.main_containers .form_section .form_section_links_1,
+.main_containers .form_section .form_circle_container {
+  display: none;
+}
+.main_containers .form_section_links_2 {
+  max-width: 400px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 1.8rem 0;
+}
+.main_containers .form_section_links_2 .links_2 {
+  text-align: center;
+  text-decoration: none;
+  color: rgb(38, 41, 54);
+}
+.main_containers .form_section_links_2 .links_2:hover {
+  text-decoration: underline;
+}
+
+/*footer*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+}
+
+/*Media query*/
+@media only screen and (min-width: 768px) {
+  .main_containers {
+    flex-flow: row nowrap;
+    /*form section*/
+    /*welcome section*/
+    /*hide links*/
+  }
+  .main_containers .form_section {
+    max-width: 580px;
+    width: 100%;
+    align-self: start;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-right: 2rem;
+    /*from section links made visible with styling*/
+    /*circles in the form made visible and apply styling*/
+  }
+  .main_containers .form_section_input {
+    align-self: center;
+    width: 75%;
+  }
+  .main_containers .form_section .form_section_links_1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .main_containers .form_section .form_section_links_1 .links {
+    color: rgb(248, 248, 255);
+    font-weight: 300;
+  }
+  .main_containers .form_section .form_section_links_1 .links:hover {
+    text-decoration: underline;
+  }
+  .main_containers .form_section .form_circle_container {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    margin-top: 9rem;
+    padding: 2rem;
+  }
+  .main_containers .form_section .form_circle_container .circle_image {
+    margin: 0 0.625rem;
+    width: 2.5rem;
+  }
+  .main_containers .welcome_section {
+    /*circle conatainer styles and layout*/
+  }
+  .main_containers .welcome_section .circle_image_container {
+    max-width: 600px;
+    width: 100%;
+    height: 3.125rem;
+    justify-content: center;
+    align-items: center;
+    /*CIRCLE ANIMATIONS*/
+  }
+  .main_containers .welcome_section .circle_image_container .circle_image {
+    margin: 0 1rem;
+    width: 2.5rem;
+    z-index: 100;
+  }
+  .main_containers .welcome_section .circle_image_container .circle_image_1 {
+    -webkit-animation: scale 2s ease-in-out alternate 3;
+            animation: scale 2s ease-in-out alternate 3;
+  }
+  .main_containers .welcome_section .circle_image_container .circle_image_2 {
+    -webkit-animation: scale 2s ease-in-out alternate 0.2s 3;
+            animation: scale 2s ease-in-out alternate 0.2s 3;
+  }
+  .main_containers .welcome_section .circle_image_container .circle_image_3 {
+    -webkit-animation: scale 2s ease-in-out alternate 0.4s 3;
+            animation: scale 2s ease-in-out alternate 0.4s 3;
+  }
+  .main_containers .welcome_section .circle_image_container .circle_image_4 {
+    -webkit-animation: scale 2s ease-in-out alternate 0.6s 3;
+            animation: scale 2s ease-in-out alternate 0.6s 3;
+  }
+  .main_containers .welcome_section .circle_image_container .circle_image_5 {
+    margin: 0.3125rem;
+    -webkit-animation: scale 2s ease-in-out alternate 0.8s 3;
+            animation: scale 2s ease-in-out alternate 0.8s 3;
+  }
+  @-webkit-keyframes scale {
+    0% {
+      margin-bottom: 0;
+    }
+    50% {
+      margin-bottom: 1.25rem;
+    }
+    100% {
+      margin-bottom: 0;
+    }
+  }
+  @keyframes scale {
+    0% {
+      margin-bottom: 0;
+    }
+    50% {
+      margin-bottom: 1.25rem;
+    }
+    100% {
+      margin-bottom: 0;
+    }
+  }
+  .main_containers .form_section_links_2 {
+    display: none;
+  }
+}/*# sourceMappingURL=LoginStyles.css.map */

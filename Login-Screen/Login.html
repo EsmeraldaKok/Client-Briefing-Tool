@@ -10,14 +10,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,500&family=Poppins:wght@100;200;500;800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./stylesheets/loginScreen.css">
+        <link rel="stylesheet" href="/Login-Screen/stylesheets/LoginStyles.css">
     </head>
 
     <body>
         <div class="main_containers">
             <div role="Header" class="welcome_section">
                 <div class="headings">
-                    <h2>Welcome to the</h2>
+                    <p>Welcome to the</p>
                     <h1>Client Briefing Tool</h1>
                 </div>
                 <div class="circle_image_container">
@@ -29,17 +29,14 @@
 
                 </div>
             </div>
-            <div class="form_section">
-                <form class="form_section_container" >
-                    <div class=" form_container_input">
-                        <p>Login</p>
+            <form class="form_section">
+                    <div class="form_section_input">
+                        <h2>Login</h2>
                         <input type="text" placeholder="Username/email" class="input_fields" />
                         <input type="password" placeholder="Password" class="input_fields" />
-                        <a> 
-                            <button >Login</button>
-                        </a>
+                        <button class="login_btn">Login</button>
                     </div> 
-                    <div class="form_section_links">
+                    <div class="form_section_links_1">
                         <a href="#" class="links">Request access</a>
                         <a href="#" class="links">Forgot credentials?</a>
                     </div>
@@ -50,11 +47,15 @@
                         <img src="./Images/pink-circle.svg" class="circle_image circle_image_4" >
                         <img src="./Images/blue-circle.svg" class="circle_image circle_image_5" >
                     </div>
-                </form>
+
+            </form>
+            <div class="form_section_links_2">
+                <a href="#" class="links_2">Request access</a>
+                <a href="#" class="links_2">Forgot credentials?</a>
             </div>
         </div>
         <div role="footer" class="footer">
-            <img src="Login-Screen\Images\logo.svg" />
+            <img src=".\Images\logo.svg" />
         </div>
     </body>
 </html>

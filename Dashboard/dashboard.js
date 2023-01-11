@@ -34,8 +34,8 @@ document.body.onload = fillCalendarCurrentMonth(currentYear, currentMonth);
  
 function fillCalendarCurrentMonth (year, month) {
     let firstDayOfMonth = new Date(year, month, 1);
-    let firstDayOfMonthWeekday = firstDayOfMonth.getDay(); //define the week day of the first day given month (0-6)
-    let lastDayOfMonth = new Date(year, month + 1, 0); //define last day of given month (this will be a day number 0 of next month)
+    let firstDayOfMonthWeekday = firstDayOfMonth.getDay(); 
+    let lastDayOfMonth = new Date(year, month + 1, 0); 
 
 
 for (let i = 1; i <= lastDayOfMonth.getDate(); i++) {
